@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    
+}
+
+
+
+body {
+    font: normal normal 1em Arial, Helvetica, sans-serif;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+@media (max-width:2500px) {
+    header {
+        padding: 25px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        padding: 15px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    nav a {
+        color: black;
+        padding-right: 40px;
+        padding-left: 25px;
+        font: normal bold 1em Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+}
+
+@media (max-width:500px) {
+    header {
+        padding: 25px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav a {
+        color: black;
+        padding-left: 10px;
+        padding-bottom: 15px;
+        font: normal bold 1em Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+}
