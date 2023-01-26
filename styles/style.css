@@ -10,7 +10,7 @@
 }
 
 
-
+ /* Confugurações do corpo*/
 body {
     font: normal normal 1em Arial, Helvetica, sans-serif;
 }
@@ -19,8 +19,9 @@ main {
     position: relative;
     height: 100vh;
 }
-
+ /* Configurações em telas maiores*/
 @media (max-width:2500px) {
+    /* configuração cabeçalho e navegação*/
     header {
         padding: 25px;
         text-align: center;
@@ -39,9 +40,33 @@ main {
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
     }
-}
+    /* Configuração seção de produtos*/
+    section.produtos {
+        padding: 20px ;
+        text-align: center;
+    }
 
+    section.produtos img {
+        width: 150px;
+        height: 200px;
+        margin-top: 15px;
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+    /* Configuração mapa-waze*/
+    section.mapa-iframe {
+        padding: 10px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 490px;
+        margin-top: 10px;
+    }
+}
+ /* Configurações em telas menores*/
 @media (max-width:500px) {
+    /* configuração cabeçalho e navegação*/
     header {
         padding: 25px;
         text-align: center;
@@ -60,4 +85,30 @@ main {
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
     }
+    /* Configuração seção de produtos*/
+    section.produtos {
+        margin: auto;
+        text-align: center;
+        
+    }
+
+    .produtos img {
+        width: 120px;
+        height: 200px;
+        margin-top: 15px;
+        margin-right: 10px;
+    }
+    /* Configuração mapa-waze*/
+    section.mapa-iframe {
+        padding: 10px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        margin-top: 10px;
+        width: 290px;
+        height: 400px;
+        
+    }
 }
+
