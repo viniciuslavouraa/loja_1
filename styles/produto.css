@@ -23,22 +23,47 @@ main {
 @media (max-width:2500px) {
     /* configuração cabeçalho e navegação*/
     header {
+        background-color: #d3d3d3be;
         padding: 25px;
         text-align: center;
+    }
+    header h1 {
+        color: orangered;
+        padding-bottom: 5px;
+        text-shadow: 1px 3px 1px black;
+        font-variant: small-caps;
+    }
+    header p {
+        color: black;
+        text-transform: uppercase;
+    }
+    header p#negrito {
+        font-weight: bolder;
+        text-transform: none;
     }
 
     nav {
         display: flex;
+        background-color: #c5c5c5be;
         padding: 15px;
         flex-direction: row;
         justify-content: flex-start;
     }
     nav a {
         color: black;
+        padding-top: 5px;
         padding-right: 40px;
         padding-left: 25px;
+        padding-bottom: 5px;
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
+    }
+    nav a:hover {
+        position: relative;
+        background-color: #ff4400c7;
+        border-radius: 20px;
+        top: -5px;
+        left: 10px;
     }
 
     div.container {
@@ -98,10 +123,24 @@ main {
     }
     nav a {
         color: black;
+        padding-top: 5px;
         padding-left: 10px;
         padding-bottom: 15px;
+        width: 60px;
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
+
+    }
+
+    nav a:hover {
+        position: relative;
+        background-color: #ff4400c7;
+        border-radius: 20px;
+        left: 10px;
+        
+    }
+    nav a:last-child {
+        border-radius: 30px;
     }
     /* Configuração do produto*/
     div.container {
@@ -142,4 +181,27 @@ main {
         text-align: center;
         text-decoration: none;
     }
+}
+
+footer {
+    background-color: #d3d3d3be;
+    padding: 15px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+footer p {
+    display: inline;
+}
+footer p#p {
+    display: block;
+}
+
+a#divulgaçao {
+    font-size: .6em;
+    text-decoration: none;
+    color: black;
+}
+a#divulgaçao:hover {
+    text-decoration: underline;
 }
