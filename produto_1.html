@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto_1</title>
+    <link rel="stylesheet" href="styles/produto.css">
+    <script src="produtos.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Nome da Loja</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="../#produtos">Produtos</a>
+        <a href="#">Fale Conosco</a>
+    </nav>
+    <main>
+        <section class="produto">
+            <h2>Churrasqueira</h2>
+            <div class="container">
+                <img src="" alt="">
+                <div id="cores">
+                    <label for="cor">Selecione uma cor: </label>
+                    <select name="cor" id="cor">
+                        <option selected value="cimento" class="color">Cimento</option>
+                        <option value="vermelho" class="color">Vermelho</option>
+                        <option value="bege" class="color">Bege</option>
+                    </select>
+                </div>
+                <button id="botao">
+                    <a href="#">Comprar</a>
+                </button>
+            </div>
+        </section>
+    </main>
+<script>
+    var cor = document.querySelector('#cor')
+    var color = document.querySelectorAll('.color')
+    var botao = document.querySelector('#botao')
+    cor.addEventListener('click', enviar)
+    function enviar() {
+        switch (cor.value) {
+            case 'cimento':
+                cor.style.background = 'white'
+                color[0].style.background = 'white'
+                break;
+            case 'vermelho' :
+                cor.style.background = 'red'
+                color[2].style.background = 'white'
+                break
+            case 'bege':
+                cor.style.background = 'brown'
+                color[1].style.background = 'white'
+                break
+            default:
+                break;
+        }
+    }
+</script>
+</body>
+</html>
