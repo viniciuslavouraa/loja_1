@@ -65,11 +65,19 @@ main {
         top: -5px;
         left: 10px;
     }
-
+    /* Configuração da compra*/
     div.container {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    section.produto {
+        padding: 20px;
+        text-align: center;
+    }
+    .produto h2 {
+        margin-bottom: 15px;
     }
 
     section.produto img {
@@ -77,47 +85,66 @@ main {
         height: 300px;
         margin-top: 15px;
         margin-left: 10px;
-        border: 1px solid black;
+        margin-bottom: 20px;
+        cursor: pointer;
     }
-        /* Configuração da seleção de cores*/
-        div#cores {
-            display: flex;
-            padding: 8px;
-            align-items: center;
-            font: normal bold 1em Arial, Helvetica, sans-serif;
-        }
-        select#cor {
-            padding: 2px 2px;
-            border-radius: 20px;
-            text-align: center;
-        }
-        /*Configuração do botão*/
-         #botao {
-            display: flex;
-            width: 150px;
-            height: 50px;
-            justify-content: center;
-            align-items: center;
-            margin-left: 10px;
-        }
-        #botao a {
-            color: black;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
+
+    #preço  {
+        font-size: 1.8em;
+    }
+    #parcela {
+        font-size: 1em;
+    }
+    /* Configuração da seleção de cores*/
+    div#cores {
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        font: normal bold 1em Arial, Helvetica, sans-serif;
+    }
+    select#cor {
+        padding: 2px 2px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    /*Configuração do botão*/
+        #botao {
+        display: flex;
+        width: 150px;
+        height: 50px;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 1px solid black;
+        box-shadow: 5px 4px 4px 0px #00000041;
+    }
+
+    #botao:hover {
+        position: relative;
+        top: -2px;
+        box-shadow: 5px 2px 2px 2px #00000041;
+    }
+
+    #botao a {
+        color: black;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
 }
 
 @media (max-width:500px) {
     /* configuração cabeçalho e navegação*/
     header {
-        padding: 25px;
+        padding: 20px;
         text-align: center;
     }
 
     nav {
         display: flex;
-        padding: 15px;
+        padding: 10px;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -125,7 +152,7 @@ main {
         color: black;
         padding-top: 5px;
         padding-left: 10px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         width: 60px;
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
@@ -150,10 +177,18 @@ main {
     }
 
     section.produto img {
+        background-color: transparent;
         margin-left: 5px;
         width: 260px;
-        height: 300px;
-        border: 1px solid black;
+        height: 260px;
+        
+    }
+    /* Configuração preço*/
+    #preço  {
+        font-size: 1.8em;
+    }
+    #parcela {
+        font-size: 1em;
     }
     /* Configuração da seleção de cores*/
     div#cores {
@@ -185,7 +220,7 @@ main {
 
 footer {
     background-color: #d3d3d3be;
-    padding: 15px;
+    padding: 8px;
     text-align: center;
     font-weight: bolder;
 }

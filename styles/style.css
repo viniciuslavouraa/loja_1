@@ -69,13 +69,25 @@ main {
         padding: 20px ;
         text-align: center;
     }
+    .produtos h2 {
+        margin-bottom: 15px;
+    }
 
     section.produtos img {
         width: 150px;
         height: 200px;
         margin-top: 15px;
-        margin-right: 10px;
-        border: 1px solid black;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        border-radius: 10%;
+        box-sizing: border-box;
+    }
+
+    .produtos img:hover {
+        position: relative;
+        top: -15px;
+        left: -8px;
+        box-shadow: 5px 5px 5px 3px #0000004f;
     }
     /* Configuração mapa-waze*/
     section.mapa-iframe {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Churrasqueira</title>
+    <title>Balaustre</title>
     <link rel="stylesheet" href="styles/produto.css">
     <script src="produtos.js"></script>
 </head>
@@ -21,9 +21,9 @@
     </nav>
     <main>
         <section class="produto">
-            <h2>Churrasqueira</h2>
+            <h2>Balaustre</h2>
             <div class="container">
-                <img src="churrasqueira/churrasqueira-concreto.png" alt="" id="img">
+                <img src="balaustre/balaustre-g.png" alt="" id="img">
                 <p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
                 <div id="cores">
                     <label for="cor">Selecione uma cor: </label>
@@ -45,33 +45,6 @@
         <p id="p">rmacheto9@gmail.com</p>
         <a href="https://www.flaticon.com/br/icones-gratis/whatsapp" title="whatsapp ícones" id="divulgaçao">Whatsapp ícones criados por riajulislam - Flaticon</a>
     </footer>
-<script>
-    var img = document.querySelector('#img')
-    var cor = document.querySelector('#cor')
-    var color = document.querySelectorAll('.color')
-    var botao = document.querySelector('#botao')
-    cor.addEventListener('click', enviar)
-    function enviar() {
-        switch (cor.value) {
-            case 'cimento':
-            img.setAttribute('src', 'churrasqueira/churrasqueira-concreto.png')
-                cor.style.background = 'white'
-                color[0].style.background = 'white'
-                break;
-            case 'vermelho' :
-                img.setAttribute('src', 'churrasqueira/churrasqueira-verm.png')
-                cor.style.background = 'red'
-                color[2].style.background = 'white'
-                break
-            case 'bege':
-                img.setAttribute('src', 'churrasqueira/churrasqueira-bege.png')
-                cor.style.background = 'brown'
-                color[1].style.background = 'white'
-                break
-            default:
-                break;
-        }
-    }
 </script>
 </body>
 </html>

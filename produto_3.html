@@ -21,16 +21,16 @@
     </nav>
     <main>
         <section class="produto">
-            <h2>Churrasqueira</h2>
+            <h2>Vaso</h2>
             <div class="container">
-                <img src="churrasqueira/churrasqueira-concreto.png" alt="" id="img">
+                <img src="vasos/vaso-retangular.png" alt="" id="img">
                 <p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
                 <div id="cores">
                     <label for="cor">Selecione uma cor: </label>
                     <select name="cor" id="cor">
-                        <option selected value="cimento" class="color">Cimento</option>
-                        <option value="vermelho" class="color">Vermelho</option>
-                        <option value="bege" class="color">Bege</option>
+                        <option selected value="padrao" class="color">Padrâo</option>
+                        <option value="circular" class="color">Circular</option>
+                        <option value="desenhado" class="color">Desenhado</option>
                     </select>
                 </div>
                 <button id="botao">
@@ -53,19 +53,17 @@
     cor.addEventListener('click', enviar)
     function enviar() {
         switch (cor.value) {
-            case 'cimento':
-            img.setAttribute('src', 'churrasqueira/churrasqueira-concreto.png')
+            case 'padrao':
+            img.setAttribute('src', 'vasos/vaso-retangular.png')
                 cor.style.background = 'white'
                 color[0].style.background = 'white'
                 break;
-            case 'vermelho' :
-                img.setAttribute('src', 'churrasqueira/churrasqueira-verm.png')
-                cor.style.background = 'red'
+            case 'circular' :
+                img.setAttribute('src', 'vasos/vaso-circular.png')
                 color[2].style.background = 'white'
                 break
-            case 'bege':
-                img.setAttribute('src', 'churrasqueira/churrasqueira-bege.png')
-                cor.style.background = 'brown'
+            case 'desenhado':
+                img.setAttribute('src', 'vasos/vaso-desenhado.png')
                 color[1].style.background = 'white'
                 break
             default:
