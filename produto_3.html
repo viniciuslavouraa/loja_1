@@ -82,8 +82,8 @@
     var tam = document.querySelector('#tam')
     var estilo = document.querySelector('#estilos')
     var botao = document.querySelector('#botao')
-    tam.addEventListener('click', mostrar)
-    estilo.addEventListener('click', enviar)
+    tam.addEventListener('change', mostrar)
+    estilo.addEventListener('change', enviar)
     function enviar() {
         switch (estilo.value) {
             case 'padrao':
