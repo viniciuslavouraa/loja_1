@@ -6,7 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churrasqueira</title>
     <link rel="stylesheet" href="styles/produto.css">
-    <script src="produtos.js"></script>
+    <style>
+    /* Configuração da seleção de cores*/
+    div#tamanho {
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        font: normal bold 1em Arial, Helvetica, sans-serif;
+    }
+    select#tam{
+        padding: 2px 2px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    div#modelo {
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        font: normal bold 1em Arial, Helvetica, sans-serif;
+    }
+    select#estilos {
+        padding: 2px 2px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -24,10 +48,18 @@
             <h2>Vaso</h2>
             <div class="container">
                 <img src="vasos/vaso-retangular.png" alt="" id="img">
-                <p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
-                <div id="cores">
-                    <label for="cor">Selecione uma cor: </label>
-                    <select name="cor" id="cor">
+                <p><strong id="preço">R$ 80,00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
+                <div id="tamanho">
+                    <label for="tam">Tamanho: </label>
+                    <select name="tam" id="tam">
+                        <option selected value="p">Pequeno</option>
+                        <option value="m">Médio</option>
+                        <option value="g">Grande</option>
+                    </select>
+                </div>
+                <div id="modelo">
+                    <label for="estilos">Selecione um modelo: </label>
+                    <select name="estilos" id="estilos">
                         <option selected value="padrao" class="color">Padrâo</option>
                         <option value="circular" class="color">Circular</option>
                         <option value="desenhado" class="color">Desenhado</option>
@@ -47,12 +79,13 @@
     </footer>
 <script>
     var img = document.querySelector('#img')
-    var cor = document.querySelector('#cor')
-    var color = document.querySelectorAll('.color')
+    var tam = document.querySelector('#tam')
+    var estilo = document.querySelector('#estilos')
     var botao = document.querySelector('#botao')
-    cor.addEventListener('click', enviar)
+    tam.addEventListener('click', mostrar)
+    estilo.addEventListener('click', enviar)
     function enviar() {
-        switch (cor.value) {
+        switch (estilo.value) {
             case 'padrao':
             img.setAttribute('src', 'vasos/vaso-retangular.png')
                 cor.style.background = 'white'
@@ -66,6 +99,24 @@
                 img.setAttribute('src', 'vasos/vaso-desenhado.png')
                 color[1].style.background = 'white'
                 break
+            default:
+                break;
+        }
+    }
+
+    function mostrar() {
+        var preço = document.getElementsByTagName('p')[2]
+
+        switch (tam.value) {
+            case 'p':
+                preço.innerHTML = '<p><strong id="preço">R$ 80,00</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+                break;
+            case 'm':
+                preço.innerHTML = '<p><strong id="preço">R$ 120,80</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+            break
+            case 'g':
+            preço.innerHTML = '<p><strong id="preço">R$ 300,00</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+            break
             default:
                 break;
         }
