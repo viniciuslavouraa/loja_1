@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balaustre</title>
     <link rel="stylesheet" href="styles/produto.css">
-    <script src="produtos.js"></script>
+    <style>
+        div#tamanho {
+            display: flex;
+            padding: 8px;
+            align-items: center;
+            font: normal bold 1em Arial, Helvetica, sans-serif;
+        }
+        select#tam{
+            padding: 2px 2px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        div#modelo {
+            display: flex;
+            padding: 8px;
+            align-items: center;
+            font: normal bold 1em Arial, Helvetica, sans-serif;
+        }
+        select#estilos {
+            padding: 2px 2px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,12 +48,12 @@
             <div class="container">
                 <img src="balaustre/balaustre-g.png" alt="" id="img">
                 <p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
-                <div id="cores">
-                    <label for="cor">Selecione uma cor: </label>
-                    <select name="cor" id="cor">
-                        <option selected value="cimento" class="color">Cimento</option>
-                        <option value="vermelho" class="color">Vermelho</option>
-                        <option value="bege" class="color">Bege</option>
+                <div id="tamanho">
+                    <label for="tam">Selecione um tamanho: </label>
+                    <select name="tam" id="tam">
+                        <option selected value="p" class="color">P</option>
+                        <option value="m" class="color">M</option>
+                        <option value="g" class="color">G</option>
                     </select>
                 </div>
                 <button id="botao">
@@ -45,6 +68,26 @@
         <p id="p">rmacheto9@gmail.com</p>
         <a href="https://www.flaticon.com/br/icones-gratis/whatsapp" title="whatsapp ícones" id="divulgaçao">Whatsapp ícones criados por riajulislam - Flaticon</a>
     </footer>
+<script>
+        var tam = document.querySelector('#tam')
+        tam.addEventListener('change', mostrar)
+        function mostrar() {
+        var preço = document.getElementsByTagName('p')[2]
+
+        switch (tam.value) {
+            case 'p':
+                preço.innerHTML = '<p><strong id="preço">R$ 80,00</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+                break;
+            case 'm':
+                preço.innerHTML = '<p><strong id="preço">R$ 120,80</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+            break
+            case 'g':
+            preço.innerHTML = '<p><strong id="preço">R$ 300,00</strong> <br> ou <br> <sub id="parcela">12x de xx,xx</sub></p>'
+            break
+            default:
+                break;
+        }
+    }
 </script>
 </body>
 </html>

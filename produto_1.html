@@ -48,22 +48,21 @@
 <script>
     var img = document.querySelector('#img')
     var cor = document.querySelector('#cor')
-    var color = document.querySelectorAll('.color')
-    var botao = document.querySelector('#botao')
+    var preço = document.getElementsByTagName('p')[2]
     cor.addEventListener('change', enviar)
     function enviar() {
         switch (cor.value) {
             case 'cimento':
-            img.setAttribute('src', 'churrasqueira/churrasqueira-concreto.png')
-                cor.style.background = 'white'
-                
+            img.setAttribute('src', 'churrasqueira/churrasqueira-concreto.png')  
+            preço.innerHTML = '<p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>'   
                 break;
             case 'vermelho' :
                 img.setAttribute('src', 'churrasqueira/churrasqueira-verm.png')
+                preço.innerHTML = '<p><strong id="preço">R$ 1,200.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>'  
                 break
             case 'bege':
                 img.setAttribute('src', 'churrasqueira/churrasqueira-bege.png')
-
+                preço.innerHTML = '<p><strong id="preço">R$ 1,000.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>'  
                 break
             default:
                 break;
