@@ -1,0 +1,15 @@
+            <div class="container">
+                <img src="balaustre/balaustre-g.png" alt="" id="img">
+                <p><strong id="preço">R$ 1,500.00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
+                <div id="tamanho">
+                    <label for="tam">Selecione um tamanho: </label>
+                    <select name="tam" id="tam">
+                        <option selected value="p" class="color">P</option>
+                        <option value="m" class="color">M</option>
+                        <option value="g" class="color">G</option>
+                    </select>
+                </div>
+                <button id="botao">
+                    <a href="#">Comprar</a>
+                </button>
+            </div>

@@ -16,14 +16,9 @@
     }
     select#tam{
         padding: 2px 2px;
+        margin-bottom: 15px;
         border-radius: 20px;
         text-align: center;
-    }
-    div#modelo {
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        font: normal bold 1em Arial, Helvetica, sans-serif;
     }
     select#estilos {
         padding: 2px 2px;
@@ -48,26 +43,28 @@
             <h2>Vaso</h2>
             <div class="container">
                 <img src="vasos/vaso-retangular.png" alt="" id="img">
-                <p><strong id="preço">R$ 80,00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p>
                 <div id="tamanho">
-                    <label for="tam">Tamanho: </label>
-                    <select name="tam" id="tam">
-                        <option selected value="p">Pequeno</option>
-                        <option value="m">Médio</option>
-                        <option value="g">Grande</option>
-                    </select>
+                    <form>
+                        <p><strong id="preço">R$ 80,00</strong> <br> ou <br> <sub id="parcela">12x de 130,90</sub></p> <br>
+                        <label for="tam">Tamanho: </label>
+                        <select name="tam" id="tam">
+                            <option selected value="p">Pequeno</option>
+                            <option value="m">Médio</option>
+                            <option value="g">Grande</option>
+                        </select>
+                        <div id="modelo">
+                            <label for="estilos">Selecione um modelo: </label>
+                            <select name="estilos" id="estilos">
+                                <option selected value="padrao" class="color">Padrâo</option>
+                                <option value="circular" class="color">Circular</option>
+                                <option value="desenhado" class="color">Desenhado</option>
+                            </select>
+                            <button id="botao">
+                                <a href="#">Comprar</a>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div id="modelo">
-                    <label for="estilos">Selecione um modelo: </label>
-                    <select name="estilos" id="estilos">
-                        <option selected value="padrao" class="color">Padrâo</option>
-                        <option value="circular" class="color">Circular</option>
-                        <option value="desenhado" class="color">Desenhado</option>
-                    </select>
-                </div>
-                <button id="botao">
-                    <a href="#">Comprar</a>
-                </button>
             </div>
         </section>
     </main>
