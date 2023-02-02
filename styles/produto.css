@@ -5,7 +5,13 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
 :root {
+    --font_titulo1: 'Aboreto', cursive;
+    --font_titulo2: 'Oswald', sans-serif; 
     
 }
 
@@ -23,19 +29,23 @@ main {
 @media (max-width:2500px) {
     /* configuração cabeçalho e navegação*/
     header {
-        background-color: #d3d3d3be;
+        background-color: #0A1494;
         padding: 25px;
         text-align: center;
+        font-family: var(--font_titulo2);
     }
     header h1 {
-        color: orangered;
+        color: #E04704;
         padding-bottom: 5px;
         text-shadow: 1px 3px 1px black;
         font-variant: small-caps;
+        letter-spacing: 1.5px;
     }
     header p {
-        color: black;
+        color: white;
         text-transform: uppercase;
+        text-shadow: 1px 3px 1px black;
+        font-family: var(--font_titulo2);
     }
     header p#negrito {
         font-weight: bolder;
@@ -44,10 +54,11 @@ main {
 
     nav {
         display: flex;
-        background-color: #c5c5c5be;
+        background-color: #1B29E0;
         padding: 15px;
         flex-direction: row;
         justify-content: flex-start;
+        box-shadow: 2px 2px 2px #00000069;
     }
     nav a {
         color: black;
@@ -80,13 +91,13 @@ main {
         text-align: center;
     }
     .produto h2 {
-        margin-bottom: 15px;
+        margin-top: 15px;
+        font-family: var(--font_titulo2);
     }
 
     section.produto img {
         width: 300px;
         height: 260px;
-        margin-top: 15px;
         margin-left: 10px;
         margin-bottom: 20px;
         cursor: pointer;
@@ -148,7 +159,7 @@ main {
 
     nav {
         display: flex;
-        padding: 10px;
+        padding: 8px;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -224,7 +235,7 @@ main {
 }
 
 footer {
-    background-color: #d3d3d3be;
+    background-color: #1B29E0;
     padding: 2px;
     text-align: center;
     font-weight: bolder;
