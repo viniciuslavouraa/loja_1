@@ -165,13 +165,14 @@ main {
         justify-content: flex-start;
     }
     nav a {
-        color: black;
+        color: white;
         padding-top: 5px;
         padding-left: 10px;
         padding-bottom: 10px;
         width: 60px;
         font: normal bold 1em Arial, Helvetica, sans-serif;
         text-decoration: none;
+        text-shadow: 1px 1px 3px black;
 
     }
 
